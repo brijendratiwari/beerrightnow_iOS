@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14A361p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BRNCameraAlert">
+            <connections>
+                <outlet property="backgroundView" destination="tcZ-Sc-mdO" id="iWg-Mh-egg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcZ-Sc-mdO">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRY-yV-6Fg">
+                    <rect key="frame" x="40" y="167" width="240" height="208"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog_noline.png" translatesAutoresizingMaskIntoConstraints="NO" id="q5F-ow-sF3">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="208"/>
+                            <rect key="contentStretch" x="0.29999999999999999" y="0.20000000000000001" width="0.40000000000000002" height="0.40000000000000002"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4s-JA-WXp">
+                            <rect key="frame" x="55" y="30" width="130" height="44"/>
+                            <state key="normal" title="Open Camera" backgroundImage="dialog_btn.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cameraClicked:" destination="-1" eventType="touchUpInside" id="bTr-Ql-YQj"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVX-UP-ssU">
+                            <rect key="frame" x="55" y="82" width="130" height="44"/>
+                            <state key="normal" title="Open Gallery" backgroundImage="dialog_btn.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="galleryClicked:" destination="-1" eventType="touchUpInside" id="aEd-cF-Vun"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWS-n0-cYV">
+                            <rect key="frame" x="55" y="134" width="130" height="44"/>
+                            <state key="normal" title="Continue" backgroundImage="dialog_btn.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="contineClicked:" destination="-1" eventType="touchUpInside" id="Jln-oL-p8k"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="Qnp-Jc-zXz"/>
+                        <constraint firstAttribute="height" constant="208" id="pks-7n-9Ab"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="nRY-yV-6Fg" secondAttribute="centerX" id="FeS-W7-aJf"/>
+                <constraint firstAttribute="centerY" secondItem="nRY-yV-6Fg" secondAttribute="centerY" constant="13" id="Lkd-RI-uI9"/>
+                <constraint firstAttribute="trailing" secondItem="tcZ-Sc-mdO" secondAttribute="trailing" id="SBr-3h-IOq"/>
+                <constraint firstItem="tcZ-Sc-mdO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gcY-0y-C6W"/>
+                <constraint firstItem="tcZ-Sc-mdO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mWh-Wd-wYw"/>
+                <constraint firstAttribute="bottom" secondItem="tcZ-Sc-mdO" secondAttribute="bottom" id="nfh-MB-GSo"/>
+            </constraints>
+            <point key="canvasLocation" x="274" y="255"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dialog_btn.png" width="90" height="35"/>
+        <image name="dialog_noline.png" width="25" height="145"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

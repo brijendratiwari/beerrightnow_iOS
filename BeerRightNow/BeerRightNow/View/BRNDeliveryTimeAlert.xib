@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BRNDeliveryTimeAlert">
+            <connections>
+                <outlet property="asapRadio" destination="CRi-TK-8Na" id="YEN-Jd-PbW"/>
+                <outlet property="backgroundView" destination="ehL-iw-VhD" id="iqe-yk-SFq"/>
+                <outlet property="cancelBtn" destination="IDM-wD-8Ca" id="LeR-Q1-orB"/>
+                <outlet property="containerView" destination="ihp-hS-HaQ" id="ElF-fd-uQN"/>
+                <outlet property="dateMissMatchInfoLbl" destination="U2m-Pb-xg4" id="4l0-Ns-1PQ"/>
+                <outlet property="dateSelectBtn" destination="hm0-Vm-WwO" id="Qwe-qr-wRc"/>
+                <outlet property="dateTimePicker" destination="6aJ-NR-dvr" id="Ujf-DK-eIt"/>
+                <outlet property="liquorDateSelectBtn" destination="kui-0e-cDw" id="Y5g-qg-qdu"/>
+                <outlet property="liquorTimeSelecteBtn" destination="Bia-EP-65R" id="C6J-Oz-sFr"/>
+                <outlet property="okayBtn" destination="iEl-WH-pd6" id="mCP-d9-xyq"/>
+                <outlet property="redioCartBtn" destination="ZA5-VG-niV" id="v1s-xu-kfJ"/>
+                <outlet property="redioLiquorBtn" destination="blW-Tp-XCD" id="1Bd-Mf-nfZ"/>
+                <outlet property="timePickerView" destination="NFb-u6-TTu" id="LvB-IA-94F"/>
+                <outlet property="timeSelecteBtn" destination="B8q-XL-4Eh" id="SR3-nh-SIp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1OC-R9-nZx">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihp-hS-HaQ">
+                    <rect key="frame" x="10" y="45" width="300" height="420"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialog.png" translatesAutoresizingMaskIntoConstraints="NO" id="ehL-iw-VhD">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                            <rect key="contentStretch" x="0.29999999999999999" y="0.20000000000000001" width="0.40000000000000002" height="0.40000000000000002"/>
+                        </imageView>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRi-TK-8Na" customClass="RadioButton">
+                            <rect key="frame" x="8" y="10" width="78" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="ASAP" image="radio_off.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="radio_on.png"/>
+                            <connections>
+                                <action selector="onRadioClicked:" destination="-1" eventType="touchUpInside" id="Pu3-1Q-2aQ"/>
+                                <outletCollection property="groupButtons" destination="fTy-Tc-7Z7" id="cxp-Ko-ae6"/>
+                            </connections>
+                        </button>
+                        <pickerView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NFb-u6-TTu">
+                            <rect key="frame" x="0.0" y="97" width="300" height="150"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="fdb-k2-JO6"/>
+                                <outlet property="delegate" destination="-1" id="UNp-Mk-oLg"/>
+                            </connections>
+                        </pickerView>
+                        <datePicker hidden="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6aJ-NR-dvr">
+                            <rect key="frame" x="0.0" y="97" width="300" height="150"/>
+                            <date key="date" timeIntervalSinceReferenceDate="451847125.91832501">
+                                <!--2015-04-27 17:05:25 +0000-->
+                            </date>
+                            <connections>
+                                <action selector="onDatePickerValueChanged:" destination="-1" eventType="valueChanged" id="MGT-Kl-nNV"/>
+                            </connections>
+                        </datePicker>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDM-wD-8Ca">
+                            <rect key="frame" x="163" y="54" width="97" height="35"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelClicked:" destination="-1" eventType="touchUpInside" id="TVu-9v-07P"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTy-Tc-7Z7" customClass="RadioButton">
+                            <rect key="frame" x="185" y="10" width="107" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Date/Time" image="radio_off.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="radio_on.png"/>
+                            <connections>
+                                <action selector="onRadioClicked:" destination="-1" eventType="touchUpInside" id="Dp9-ve-7oW"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hm0-Vm-WwO">
+                            <rect key="frame" x="8" y="42" width="120" height="30"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Select Date">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onDateSelecteBtn:" destination="-1" eventType="touchUpInside" id="ced-DR-umr"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8q-XL-4Eh">
+                            <rect key="frame" x="172" y="42" width="120" height="30"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Select Time">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onTimeSelecteBtn:" destination="-1" eventType="touchUpInside" id="Il2-Nh-jlL"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZA5-VG-niV">
+                            <rect key="frame" x="9" y="119" width="283" height="35"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Receive your beer &amp; snacks as requested. Save your liquor to your cart." image="radio_off.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="radio_on.png"/>
+                            <connections>
+                                <action selector="onOptionRadioBtn:" destination="-1" eventType="touchUpInside" id="Qjq-TJ-Xgl"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kui-0e-cDw">
+                            <rect key="frame" x="8" y="197" width="120" height="30"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Select Date">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onDateSelecteBtn:" destination="-1" eventType="touchUpInside" id="d32-D8-Ik5"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bia-EP-65R">
+                            <rect key="frame" x="172" y="197" width="120" height="30"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Select Time">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onTimeSelecteBtn:" destination="-1" eventType="touchUpInside" id="S1d-6k-1iX"/>
+                            </connections>
+                        </button>
+                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oh oh! You're attempting to have liquor delivered outside of delivery hours. Please choose one of these options:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2m-Pb-xg4">
+                            <rect key="frame" x="8" y="79" width="284" height="37"/>
+                            <color key="backgroundColor" red="0.80470688930000001" green="0.18823529410000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="3"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blW-Tp-XCD">
+                            <rect key="frame" x="8" y="154" width="284" height="35"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="Receive your beer &amp; snacks as requested. Schedule liquor delivery for:" image="radio_off.png">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="selected" image="radio_on.png"/>
+                            <connections>
+                                <action selector="onOptionRadioBtn:" destination="-1" eventType="touchUpInside" id="dVu-lI-6HA"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEl-WH-pd6">
+                            <rect key="frame" x="40" y="54" width="97" height="35"/>
+                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="Ok">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="okClicked:" destination="-1" eventType="touchUpInside" id="FVW-Hn-AQd"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="1Q0-pZ-ZeK"/>
+                        <constraint firstAttribute="height" constant="420" id="vcN-6u-oIO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="ihp-hS-HaQ" secondAttribute="centerX" id="2tu-Ez-6Mt"/>
+                <constraint firstItem="1OC-R9-nZx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="79g-YW-QUg"/>
+                <constraint firstItem="1OC-R9-nZx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GVC-b6-4vE"/>
+                <constraint firstItem="ihp-hS-HaQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="45" id="LmW-vg-RxB"/>
+                <constraint firstAttribute="bottom" secondItem="1OC-R9-nZx" secondAttribute="bottom" id="WZP-42-vLX"/>
+                <constraint firstAttribute="trailing" secondItem="1OC-R9-nZx" secondAttribute="trailing" id="ZW5-W1-aV2"/>
+            </constraints>
+            <point key="canvasLocation" x="274" y="230"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dialog.png" width="25" height="145"/>
+        <image name="radio_off.png" width="24" height="24"/>
+        <image name="radio_on.png" width="24" height="24"/>
+    </resources>
+</document>

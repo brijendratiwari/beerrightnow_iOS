@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="BRNDeliveryGiftCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="122"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Is this a Gift" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQz-gX-HXd">
+                        <rect key="frame" x="16" y="11" width="92" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="1tm-q8-jM0"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="92" id="HWl-Qe-iYI"/>
+                            <constraint firstAttribute="width" constant="92" id="Zya-Vp-39N"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I1U-SA-Owj">
+                        <rect key="frame" x="255" y="6" width="51" height="31"/>
+                    </switch>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="or8-e6-Dfz">
+                        <rect key="frame" x="16" y="45" width="288" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                    </textField>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipient's Phone Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AdR-aH-4il">
+                        <rect key="frame" x="16" y="83" width="288" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="or8-e6-Dfz" secondAttribute="trailing" constant="8" id="5UJ-VN-Izx"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="AdR-aH-4il" secondAttribute="trailing" constant="8" id="7PD-Q3-4TX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="I1U-SA-Owj" secondAttribute="trailing" constant="8" id="AQl-Wc-plU"/>
+                    <constraint firstItem="NQz-gX-HXd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="QdS-BM-slp"/>
+                    <constraint firstItem="or8-e6-Dfz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="gt2-V5-h6M"/>
+                    <constraint firstItem="AdR-aH-4il" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="vfu-ai-6c7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="giftSwitch" destination="I1U-SA-Owj" id="qXg-Zq-b4I"/>
+                <outlet property="phoneField" destination="or8-e6-Dfz" id="LOo-VS-yai"/>
+                <outlet property="receipentField" destination="AdR-aH-4il" id="q2S-zW-Ojj"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
